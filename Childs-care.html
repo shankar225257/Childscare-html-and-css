@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="favicon.png" type="image/png" sizes="20x20">
+	<meta http-equiv="content-Type"  content="text/html" charset="utf-8">
+	<title>Online shopping of Children products such as lotions,perfumes and oils..........</title>
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+
+	
+
+			<style type="text/css">
+		  .fontfamily
+
+			         {
+			         	font-style:oblique;
+			         	font-size: 40px;
+			         	font-family:serif;
+			         	color: #ffffff;
+			         	line-height: 70%;
+
+
+			         }
+
+		        
+		  #search-text-input
+					  {
+					    border: 3px solid black;
+					    float:left;
+					    height:35px;
+					    outline:0;
+					    padding:.4em 0 .4em .6em; 
+					    width:400px; 
+					    border-radius: 17px 0px 0px 17px;
+					    background-color: #00e3a3;
+					  }
+					  
+		 #button-holder
+						{
+						    background-color:black;
+						    border :3px solid black;
+						    border-left: none;
+						    cursor:pointer;
+						    float:left;
+						    height:35px;
+						    text-align:center;
+						    width:50px;
+						    border-radius: 0px 17px 17px 0px;
+						}
+		  
+		#button-holder img{
+		    margin:4px;
+		    width:20px; 
+		}
+
+		#button-holder:hover
+		{
+			opacity: 1;
+			background-color:#00e3a3;
+		}
+
+		::placeholder
+		
+		{
+			color: white;
+			opacity:1;	
+			font-family: "Montserrat";
+
+		}
+
+		#login
+		{
+			font-family:"Montserrat";		
+			font-style:normal;
+			color: #00e3a3;
+			font-size: 20px;
+			cursor: pointer;
+			border:0;
+			background-color:white;
+			width:95px;
+			height: 27px; 
+			border:1px solid black;
+		    
+		}
+
+        #login:hover 	
+        {
+        	background-color: black;
+        	opacity: 1.0;
+        }
+          
+		#login1
+		{
+			font-family:"Montserrat";
+			font-style:normal;
+			color: #ffffff;
+			font-size: 20px;
+			cursor:pointer;
+			border:0;
+			background-color:#00e3a3;
+			width:90px;
+			height: 25px;
+			border: 1px solid black;
+		}
+
+		#login1:hover
+		{
+			background-color:black;
+			opacity: 1.0;
+		}
+
+		#borderradius
+		{
+			border-radius:20px;
+		}
+		  
+        .module2
+        {
+        display: flex;
+        background-color: white;
+        justify-content: space-around;
+        }
+
+		.module2 > div {
+		  background-color:white;
+		  margin: 6px;
+		  padding: 10px;
+		  font-size: 20px;
+		  color: black;
+		}
+
+		#oil:hover
+		{
+ 
+			background-color:grey;
+			opacity: 1.0;
+
+			
+
+		}
+        
+		#oil
+		{
+			font-family:"Montserrat";
+			font-style: bold;
+			font-size: 17px; 
+			cursor:pointer;
+			background-color:white;
+
+		} 
+
+		#footer
+		{
+			background-color: #00e3a3;
+			width:100%;
+			height: 55px;
+			display: flex; 
+			justify-content:space-around;
+		}  
+
+		#padding
+		{
+			padding: 15px 0px 0px 0px;
+			font-style: bold;
+			font-family: Montserrat;
+		}
+
+		#flexbox
+		{   
+			display: flex;
+			background-color: #00e3a3;
+			padding:5px;
+			justify-content: space-around;
+			color: white;
+			position: absolute;
+			top: 400vh;
+			left: 0;
+			right: 0;
+			font-family: Montserrat;
+		}
+		#flexitems
+		{
+			background-color: #00e3a3;
+			padding: 2px;
+		}
+
+		#flexitems1
+		{
+			background-color: #00e3a3;
+			padding: 5px;
+			border-right: solid;
+			border-right-color: grey;
+
+		}
+
+		#flexbox2
+		{
+			display: flex;
+			background-color: #00e3a3;
+			padding: 1em;
+			justify-content: space-around;
+			position: absolute;
+			top: 19vh;
+			left: 0;
+			right: 0;
+			border-top: 2px solid black;
+		}
+		 
+		#flexitems2
+		{
+			background-color: #e85b51;
+			padding: 5px;
+			border-radius: 20px;
+			font-family: "Montserrat";
+		}    
+
+		
+
+		* {box-sizing:border-box}
+
+
+		.slideshow-container 
+		{
+		  max-width: 100%;
+		  position: absolute;
+		  top: 48vh;
+		  left: 0;
+		  right: 0;
+		  margin: auto;
+
+		}
+
+
+		.mySlides 
+		{
+		  display: none;
+		}
+
+
+		.prev, .next 
+		{
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  margin-top: -22px;
+		  padding: 16px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		}
+
+
+		.next 
+		{
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		.prev:hover, .next:hover 
+		{
+		  background-color: #00e3a3;
+		}
+
+		.fade 
+		{
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade 
+		{
+		  from {opacity: .4}
+		  to {opacity: 1}
+		}
+
+		@keyframes fade 
+		{
+		  from {opacity: .4}
+		  to {opacity: 1}
+		}    
+
+        #flex
+		{
+			display: flex;
+			background-color:#00e3a3;
+			padding: 20px;
+			overflow-x: scroll;
+			justify-content: space-between;
+			position: absolute;
+			top: 81.5vh;
+			left: 0;
+			right: 0;
+
+		}
+
+		#flexitem
+		{
+			background-color:#e85b51;
+			padding: 10px;
+			border-radius:20px;
+			color: white;
+			font-family: "Montserrat";
+			
+		}
+
+        
+
+		#buycart
+     {
+     	
+     	font-family:Montserrat;		
+			font-style:normal;
+			color: white;
+			font-size: 20px;
+			cursor: pointer;
+			border:0;
+			background-color:black;
+			height: 35px;
+			width: 200px; 
+     }
+
+     #buycart:hover
+     {
+     	opacity: 0.7;
+     }
+
+
+     #flexbox3
+     {
+      display: flex;
+      padding: 2em 0px 2em 0px;
+      justify-content: space-around;
+      background-color: #00e3a3;
+      position: absolute;
+      top: 227vh;
+      left: 0;
+      right: 0;
+     }
+
+      #flexbox4
+     {
+      display: flex;
+      padding: 2em 0px 2em 0px;
+      justify-content: space-around;
+      background-color: #00e3a3;
+      position: absolute;
+      top: 132vh;
+      left: 0;
+      right: 0;
+     }
+
+     #flexitems3
+     {
+       background-color: #3474eb;
+       padding: 1em;
+       border-radius: 30px;
+
+     }
+
+      #flexitems4
+     {
+       background-color: #e85b51;
+       padding: 1em;
+       border-radius: 30px;
+
+     }
+
+		
+      #flex2
+		{
+			display: flex;
+			background-color:#00e3a3;
+			padding: 20px;
+			overflow-x: scroll;
+			justify-content: space-between;
+			position: absolute;
+			top: 176.5vh;
+			left: 0;
+			right: 0;
+
+		}
+
+		#flexitem5
+		{
+			background-color:#3474eb;
+			padding: 10px;
+			border-radius:20px;
+			color: white;
+			font-family: Montserrat;
+			
+		}
+
+</style>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+<table  border="0" width="100%" height="100px" bgcolor="#00e3a3" cellpadding="5" cellspacing="7" style="position: absolute; top: 0; left: 0 ; right: 0; max-width: 100%; min-width: 100%;" >
+	    <tr>
+		<td align="left" class="fontfamily"><img width="60px" height="30px" id="borderradius" src="cciconmain/image2.png" ><strong>Childs-care<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="5px"><a href="plus.html">Explore-Plus</a></font></strong></td>
+		<td> 
+		<input type='text' placeholder='Search for your products....' id='search-text-input' />
+		<div id='button-holder'>
+        <img src="C:\Users\ASUS\Documents\HTML\HTMLproject 2\search.png" >
+        </div> 
+        </td>
+		<td align="right"><a href="Login page.html" ><input type="button" name="login" value="Login" id="login"></a></td>
+		<td align="left"><a href="register.html"><input type="button" name="register" value="Register" id="login"></a></td>
+
+		<td>
+
+	    <select name="More" id="login1">
+					 <option><strong>More</strong></option>
+		             <option>Notifications</option>
+		             <option>24x7 customercare</option>
+		             <option>Cart</option>
+		             <option>Download app</option>
+             
+		</select>  
+		</td>
+	    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+<div style="width: 100%; min-width: 100%; position: absolute; top: 12vh; left: 0; right: 0; padding-top: .4em; " class="module2">
+	<center><table width="1519.5px"  cellspacing="0" cellpadding="10" align="center" >
+	<tr align="center" >
+    <td id="oil" ><a href="oil.html"   style="text-decoration: none; min-width: 50%"><font color="black" ><b>Oils</b>       </font></a></td>
+	<td id="oil" ><a href="soap.html"  style="text-decoration: none; min-width: 50%"><font color="black" ><b>Soaps</b>      </font></a></div></td>
+	<td id="oil" ><a href="skin.html"  style="text-decoration: none; min-width: 50%"><font color="black" ><b>Skincare</b>   </font></a></div></td>
+	<td id="oil" ><a href="offer.html" style="text-decoration: none; min-width: 50%"><font color="black" ><b>Others</b>    </font></a></div></td>
+	<td id="oil" ><a href="age1.html"  style="text-decoration: none; min-width: 50%"><font color="black" ><b>0 to 5 age</b> </font> </a></div></td>
+	<td id="oil" ><a href="age2.html"  style="text-decoration: none; min-width: 50%"><font color="black" ><b>6 to 12 age</b></font></a></div></td>
+	</tr>	
+</table></center>	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="flexbox2" >
+	
+	<div id="flexitems2"><center><font face="Montserrat" color="white" size="5px" ><b>Big brand days</b></font><br><b><font face="Montserrat" color="black" size="6px" ><u>SALE IS</u></font><br><font face="Montserrat" color="black" size="7px" ><u>LIVE</u></font></b></center></div>
+	
+	<a style="text-decoration: none; color: white;" href="john.html"><div id="flexitems2"><center><img style="border-radius: 80px; "  width="90px" height="100px" src="copyrights page/john1.jpg"><br>&nbsp;JOHNSON'S BABY&nbsp;&nbsp;</center></div></a>
+	
+	<a style="text-decoration: none; color: white;" href="pigeon.html"><div id="flexitems2"><center><img style="border-radius: 80px;" width="90px" height="100px" src="copyrights page/pigeon.jfif"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PIGEON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></div></a>
+	
+	<a style="text-decoration: none; color: white;" href="momo.html"><div id="flexitems2"><center><img style="border-radius: 80px;" width="90px" height="100px" src="copyrights page/momo.jfif"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MAMYPOKO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></div></a>
+	
+	<a style="text-decoration: none; color: white;" href="pampers.html"><div id="flexitems2"><center><img style="border-radius: 80px;" width="90px" height="100px" src="copyrights page\pampers2.jfif"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAMPERS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</center></div></a>
+
+</div>
+
+
+
+    <div  style="background-color: white; width: 100%; height: 10px; border-top: 2px solid black; font-size: 25px; font-family:Montserrat; font-style:bold; color: #e85b51; position: absolute; left: 0; right: 0; top:39.5vh; ">
+	<center><table>
+		<tr>
+			<a href="sbi.html"><img width="100%" height="60px" src="copyrights page\img.jpg"></a>
+		</tr>
+	</table></center>
+</div>
+<br><br><br>
+
+
+
+
+
+<div style="background-color: #00e3a3;" class="slideshow-container">
+
+  <div  class="mySlides fade">
+   <a href="john.html"><img width="100%" height="250px" src="copyrights page\module3.jpg" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+   <a href="momo.html"><img width="100%" height="250px" src="copyrights page\momo.webp" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="pigeon.html"><img width="100%" height="250px" src="copyrights page\pigeon.webp" style="width:100%"></a>
+  </div>
+
+  <div class="mySlides fade">
+    <a href="pampers.html"><img width="100%" height="250px" src="copyrights page\img2.webp" style="width:100%"></a>
+  </div>
+
+  
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+    <script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+			4
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("dot");
+			  if (n > slides.length) {slideIndex = 1}    
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";  
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";  
+			  dots[slideIndex-1].className += " active";
+			}
+    </script>
+
+
+
+
+
+
+
+<div id="flex">
+	<div  id="flexitem" >
+		<center><font  face="Montserrat" font-style="bold" size="10px" style="padding: 20px 0px 0px 0px;" ><b>TOP OFFERS</b></font><br><b><font face="Montserrat" color="black" size="6px" ><u>SALE IS</u></font><br><font face="Montserrat" color="black" size="7px" ><u>LIVE</u></font><br><font size="10px" ><b>SHOP TODAY!</b></font></b></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div  id="flexitem" >
+		<center><img style="border-radius: 30px" src="mamypoko\m10.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mamaearth hair oil with 3(500ml)</font><br>
+        <font face="serif" font-style="bold" size="5px" color="black" >Rs 500&nbsp;</font>
+        <font style="opacity: 1" size="3px"><strike>Rs 689</strike></font>
+        <font size="3px">&nbsp;<br>Save Rs 189/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="oils\oil3.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Dabur lal tail 500ml,Ayurvedic oil</font><br>
+		<font face="serif" font-style="bold" size="5px" color="black" >Rs 269&nbsp;</font>
+		<font style="opacity: 1" size="3px"><strike>Rs 360</strike></font>
+		<font size="3px">&nbsp;<br>Save Rs 91/-</font>
+	    </center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="pampers\p8.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mother sparsh India's first cooking oil,500ml</font><br><font face="serif" font-style="bold" size="5px" color="black">Rs 384&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 399</strike></font><font size="3px"><br>Save Rs 15/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="oils\oil5.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Himalaya baby massage oil(200ml)</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 137&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 150</strike></font><font size="3px">&nbsp;<br>Save Rs 13/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="pigeon\pp6.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Sebamed baby massage oil,150ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 350&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 300</strike></font><font size="3px">&nbsp;<br>Save Rs 50/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="oils\oil1.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mamaearth hair oil with almond and avocado,100ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 50&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 90</strike></font><font size="3px">&nbsp;<br>Save Rs 40/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="johnsons\j9.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Massitone baby massage oil,150ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 490&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 528</strike></font><font size="3px">&nbsp;<br>Save Rs 38/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="oils\oil9.webp" width="180px" height="180px"><br>
+	    <font  face="serif" font-style="bold" size="4px" >Dasapushpadi Baby Head Massage Oil, 200ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 1225&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 1250</strike></font><font size="3px">&nbsp;<br>Save Rs 40/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem" >
+		<center><img style="border-radius: 30px" src="pigeon\pp16.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mom and world baby hair oil,200ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 549&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 599</strike></font><font size="3px">&nbsp;<br>Save Rs 50/-</font></font></center><br>
+		<center><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><br><br>
+
+
+
+
+
+
+
+
+
+<div id="flexbox4" >
+	<div id="flexitems3" >
+		<a href="skin.html"><img  style="border-radius: 30px;" width="700px" height="250px" src="copyrights page\flex32.jpg"></a>
+	</div>
+	<div id="flexitems3" >
+		<a href="sebamed.html"><img style="border-radius: 30px;" width="700px" height="250px" src="copyrights page\flex33.webp"></a>
+	</div>
+</div>
+<br>
+
+
+
+
+
+
+
+<div id="flex2">
+	<div id="flexitem5" >
+		<center><font  face="Montserrat" font-style="bold" size="10px" style="padding: 20px 0px 0px 0px;" ><b>TOP DEALS</b></font><br><b><font face="Montserrat" color="black" size="6px" ><u>SELLING</u></font><br><font face="Montserrat" color="black" size="7px" ><u>LIVE</u></font><br><font face="Montserrat" size="10px" ><b>TODAY!</b></font></b></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="oils\oil2.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mamaearth hair oil with 3(500ml)</font><br>
+        <font face="serif" font-style="bold" size="5px" color="black" >Rs 500&nbsp;</font>
+        <font style="opacity: 1" size="3px"><strike>Rs 689</strike></font>
+        <font size="3px">&nbsp;<br>Save Rs 189/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="johnsons\j15.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Dabur lal tail 500ml,Ayurvedic oil</font><br>
+		<font face="serif" font-style="bold" size="5px" color="black" >Rs 269&nbsp;</font>
+		<font style="opacity: 1" size="3px"><strike>Rs 360</strike></font>
+		<font size="3px">&nbsp;<br>Save Rs 91/-</font>
+	    </center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="oils\oil4.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mother sparsh India's first cooking oil,500ml</font><br><font face="serif" font-style="bold" size="5px" color="black">Rs 384&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 399</strike></font><font size="3px"><br>Save Rs 15/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="pigeon\pp17.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Himalaya baby massage oil(200ml)</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 137&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 150</strike></font><font size="3px">&nbsp;<br>Save Rs 13/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="oils\oil7.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Sebamed baby massage oil,150ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 350&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 300</strike></font><font size="3px">&nbsp;<br>Save Rs 50/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="pampers\p12.jpg" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mamaearth hair oil with almond and avocado,100ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 50&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 90</strike></font><font size="3px">&nbsp;<br>Save Rs 40/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="oils\oil10.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Massitone baby massage oil,150ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 490&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 528</strike></font><font size="3px">&nbsp;<br>Save Rs 38/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="soaps\s3.jpeg" width="180px" height="180px"><br>
+	    <font  face="serif" font-style="bold" size="4px" >Dasapushpadi Baby Head Massage Oil, 200ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 1225&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 1250</strike></font><font size="3px">&nbsp;<br>Save Rs 40/-</font></center><br>
+		<center ><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+	<div id="flexitem5" >
+		<center><img style="border-radius: 30px" src="oils\oil8.webp" width="180px" height="180px"><br>
+		<font  face="serif" font-style="bold" size="4px" >Mom and world baby hair oil,200ml</font><br><font face="serif" font-style="bold" size="5px" color="black" >Rs 549&nbsp;</font><font style="opacity: 1" size="3px"><strike>Rs 599</strike></font><font size="3px">&nbsp;<br>Save Rs 50/-</font></font></center><br>
+		<center><input  id="buycart" type="button" value="Add to cart"></center>
+	</div>&nbsp;&nbsp;&nbsp;&nbsp;
+</div><br>
+
+
+<div id="flexbox3">
+	<div id="flexitems4" >
+		<a href="offer.html"><img style="border-radius: 30px;" width="700px" height="250px" src="copyrights page\flex34.webp"></a>
+	</div>
+	<div id="flexitems4" >
+		<a href="babyhug.html"><img style="border-radius: 30px;" width="700px" height="250px" src="copyrights page\flex35.webp"></a>
+	</div>
+</div><br><br><br>
+
+
+
+
+
+
+
+
+
+<div style="font-style: bold; font-family:Montserrat; position: absolute; top: 275vh; left: 0; right: 0; padding-left: .5em; padding-right: .5em;" >
+<font style="font-size: 18px; color: grey" ><b>Childs-care: The One-stop Shopping Destination:</b></font><br><br>
+<font size="2px;" color="grey" >E-commerce is revolutionizing the way we all shop in India. Why do you want to hop from one store to another in search of the latest children's care products when you can find it on the Internet in a single click?. Childs-care houses everything you can possibly imagine,from child diapers ,soaps ,oils,skincare,perfumes with all brands and specify with age, we got them all covered. You name it, and you can stay assured about finding them all here. For those of you with erratic working hours, Childs-care is your best bet. Shop in your PJs, at night or in the wee hours of the morning. This e-commerce never shuts down.<br><br>
+
+What's more, with our year-round shopping festivals and events, our prices are irresistible. We're sure you'll find yourself picking up more than what you had in mind. If you are wondering why you should shop from Childs-care when there are multiple options available to you.</font><br><br>
+
+<font style="font-size: 18px; color: grey" ><b>Childs-care Plus:</b></font><br><br>
+<font size="2px;" color="grey" >A world of limitless possibilities awaits you - Childscare Plus was kickstarted as a loyalty reward programme for all its regular customers at zero subscription fee. All you need is 500 supercoins to be a part of this service. For every 100 rupees spent on Childs-care order, Plus members earns 4 supercoins & non-plus members earn 2 supercoins. Free delivery, early access during sales and shopping festivals and priority customer service are the top benefits to a Childs-care Plus member. In short, earn more when you shop more!<br><br>
+
+What's more, you can even use the Childs-care supercoins for a number of exciting services be like:<br>
+An annual Zomato Gold membership<br>
+An annual Hotstar Premium membership<br>
+6 months Gaana plus subscription<br>
+Check out <a href="plus.html">https://www.Childs-care.com/plus</a>. Terms and conditions apply.</font><br><br>
+
+<font style="font-size: 18px; color: grey" ><b>No Cost EMI:</b></font><br><br>
+<font size="2px;" color="grey" >In an attempt to make high-end products accessible to all, our No Cost EMI plan enables you to shop with us under EMI, without shelling out any processing fee. Applicable on selected products, you can now shop without burning a hole in your pocket. If you've been eyeing a product for a long time, chances are it may be up for a no cost EMI. Take a look ASAP! Terms and conditions apply.<br><br>
+
+Did you know debit card holders account for 79.38 crore in the country, while there are only 3.14 crore credit card holders? After enabling EMI on Credit Cards, in another attempt to make online shopping accessible to everyone, Childs-care introduces EMI on Debit Cards, empowering you to shop confidently with us without having to worry about pauses in monthly cash flow. At present, we have partnered with Axis Bank, HDFC Bank, State Bank of India and ICICI Bank for this facility. More power to all our shoppers! Terms and conditions apply.</font><br><br>
+
+
+<font style="font-size: 18px; color: grey" ><b>What Can You Buy From Childs-care?</b></font><br>
+<font style="font-size: 18px; color: grey" ><b>OILS,SOAPS,SKINCARE,DIAPERS,LOTIONS,PERFUMES,and SHAMPOO:</b></font><br><br>
+<font size="2px;" color="grey" >From every brand, we have a product for everybody out there. Whether you're looking for larger,smaller,natural,ayurvedic, we take care of all the essentials. Shop from top brands in the country like Johnsons baby,Himalaya,Mamaearth and Dove to name a few. Rest assured, you're buying from only the most reliable names in the market.</font><br><br>
+
+<font style="font-size: 18px; color: grey" ><b>Baby and Kids:</b></font><br><br>
+<font size="2px;" color="grey" >Your kids deserve only the best. From diapers to shampoo, if you're an expecting mother or a new mother, you will find everything you need to set sail on a smooth parenting journey with the help of our baby care collection. When it comes to safety, hygiene and comfort, you can rely on us without a second thought. Huggies, MamyPoko, and Johnson & Himalaya: we host only the most-trusted names in the business for your baby.<br><br>
+
+<font style="font-size: 18px; color: grey" ><b>Top Stories:</b></font><br><br>
+<font size="2px;" color="grey" >MOST SEARCHES ON CHILDS-CARE: BY BRAND<br><ul><li>Johnsons baby</li>
+                                          <li>Mamaearth</li>
+                                          <li>Huggies</li>
+                                          <li>Himalaya</li>
+                                      </ul></font>
+</div>
+
+
+	<div id="flexbox" >
+		<div id="flexitems" ><b><u style="color: black" >ABOUT</u></b><br><br>
+			<a style="text-decoration: none; color: white; " href="contact.html">Contact us</a><br>
+		   <a style="text-decoration: none; color: white;" href="about.html">About us</a><br>
+			<a style="text-decoration: none; color: white;" href="about.html">Carriers</a><br>
+			
+		</div>
+        <div id="flexitems" ><b><u style="color: black" >POLICY</u></b><br><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Return policy</a><br>
+            <a style="text-decoration: none; color: white;" href="about.html">Terms of use</a><br>
+            <a style="text-decoration: none; color: white;" href="about.html">Security</a><br>
+            <a style="text-decoration: none; color: white;" href="about.html">Privacy</a><br>
+
+        </div>
+         <div id="flexitems"><b><u style="color: black" >HELP</u></b><br><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Payments</a><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Shipping</a><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Cancellation</a><br>
+            <a style="text-decoration: none; color: white;" href="about.html">Return</a>
+         </div>
+         <div id="flexitems1"><b><u style="color: black" >SOCIAL</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><br><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Facebook</a><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Twitter</a><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Instagram</a><br>
+           <a style="text-decoration: none; color: white;" href="about.html"> Youtube</a>
+         </div>
+         <div id="flexitems"><b><u style="color:black" >MAIL US & ADDRESS</u></b><br><br>
+            Childs-care private limted.<br>
+            LPU,Phagwara,<br>
+            Jalandar town,<br>
+            Punjab,India.<br>
+            Telephone:1800-5338-234516.
+
+         </div>
+	</div>
+
+	<div style="background-color: #00e3a3; width: 100%; height: 60px; border-top: solid; border-top-color: black; padding-top:.8em; color:black; position: absolute; left: 0; top: 416vh; font-family: Montserrat; "  >
+		  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4px" >Sell on childs-care</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4px" >Advertise</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4px" >Help center</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4px" >Copyrights<img width="17px" height="20px" style="padding-top:7px; " src="cciconmain\copyright.png"> 2020 Childs-care&nbsp;&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\visa.png">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\mc.png">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\rupay.png">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\discover.png">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\amex.png">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\cod.jfif">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\emi.png">&nbsp;&nbsp;<img width="20px" height="15px" src="copyrights page\net banking.png"></font>
+	</div>
+
+
+</body>
+</html>
